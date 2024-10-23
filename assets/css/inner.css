@@ -299,17 +299,19 @@ span.single-blog-section-img-tag {
     border-color: #08d665;
 }
 
+
+
 .portfolio-bg-1{
-    background: url(../img/project/portfolio1.jpg)
+    background: url(../img/project/project1.png)
 }
 .portfolio-bg-2{
-    background: url(../img/project/portfolio2.jpg)
+    background: url(../img/project/project2.png)
 }
 .portfolio-bg-3{
-    background: url(../img/project/portfolio3.jpg)
+    background: url(../img/project/project3.png)
 }
 .portfolio-bg-4{
-    background: url(../img/project/portfolio4.jpg)
+    background: url(../img/project/project4.png)
 }
 .portfolio-bg-5{
     background: url(../img/project/portfolio5.jpg)
