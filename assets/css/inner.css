@@ -15,12 +15,12 @@ INNER PAGES CSS----->
 .inner-wlc h2 {
     font-size: 48px;
     color: #fff;
-    text-transform: uppercase;
+    
 }
 
 .inner-wlc h3 {
     font-size: 16px;
-    text-transform: uppercase;
+    
     color: #fff;
 }
 
@@ -30,7 +30,7 @@ INNER PAGES CSS----->
 
 
 .inner-filltext h1 {
-    text-transform: uppercase;
+    
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke: 1px #161b1d;
 }
@@ -39,7 +39,7 @@ INNER PAGES CSS----->
 .single-blog-section-description h2, 
 .single-blog-section-description h2 a{
     font-size: 30px;
-    text-transform: uppercase;
+    
     line-height: 40px;
     color: #000;
     margin: 0;
@@ -69,7 +69,7 @@ INNER PAGES CSS----->
 
 .single-blog-section-author li a {
     display: inline-block;
-    text-transform: uppercase;
+    
     font-size: 16px;
     color: #666666
 }
@@ -104,7 +104,7 @@ a.blog-author img {
 
 span.single-blog-section-img-tag {
     color: #fff;
-    text-transform: uppercase;
+    
     background: #000;
     padding: 10px 25px;
     -webkit-transition: all .3s;
@@ -113,7 +113,7 @@ span.single-blog-section-img-tag {
 }
 .blog-author-image h6 {
     font-size: 13px;
-    text-transform: uppercase;
+    
     color: #000;
     opacity: .7;
     margin: 15px 0;
@@ -140,7 +140,7 @@ span.single-blog-section-img-tag {
 }
 
 .blog-banner h3 {
-    text-transform: uppercase;
+    
     font-size: 30px;
     color: #fff;
     line-height: 40px;
@@ -175,7 +175,7 @@ span.single-blog-section-img-tag {
 
 .blog-box h3 {
     font-size: 24px;
-    text-transform: uppercase;
+    
     font-weight: 700;
     margin-bottom: 40px;
 }
@@ -190,7 +190,7 @@ span.single-blog-section-img-tag {
 
 .blog-author-image p {
     font-size: 13px;
-    text-transform: uppercase;
+    
     color: #000;
     opacity: .7;
     margin: 20px 0;
@@ -211,7 +211,7 @@ span.single-blog-section-img-tag {
 }
 .single-blog-post p {
     color: #000000;
-    text-transform: uppercase;
+    
 }
 
 .single-blog-post {
@@ -227,7 +227,7 @@ span.single-blog-section-img-tag {
 .single-blog-post a{
     color: #000;
     font-size: 14px;
-    text-transform: uppercase;
+    
 }
 .single-blog-post img {
     position: absolute;
@@ -265,7 +265,7 @@ span.single-blog-section-img-tag {
     margin: 5px;
     color: #000;
     font-size: 13px;
-    text-transform: uppercase;
+    
 }
 
 .blog-tag li {
@@ -299,6 +299,30 @@ span.single-blog-section-img-tag {
     border-color: #08d665;
 }
 
+
+.portfolio-bg-11{
+    background: url(../img/project/estate1.png)
+}
+
+.portfolio-bg-12{
+    background: url(../img/project/estate2.png)
+}
+
+.portfolio-bg-13{
+    background: url(../img/project/estate3.png)
+}
+
+.portfolio-bg-21{
+    background: url(../img/project/yowl1.png)
+}
+
+.portfolio-bg-22{
+    background: url(../img/project/yowl2.png)
+}
+
+.portfolio-bg-23{
+    background: url(../img/project/yowl3.png)
+}
 
 
 .portfolio-bg-1{
@@ -342,7 +366,6 @@ span.single-blog-section-img-tag {
     font-size: 16px;
     font-weight: 600;
     color: #0b0d0e;
-    text-transform: uppercase;
     font-family: 'Oswald', sans-serif;
 }
 .portfolio-filter li.active{
@@ -355,14 +378,12 @@ span.single-blog-section-img-tag {
 .portfolio-description h6{
     font-size: 16px;
     color: #08b665;
-    text-transform: uppercase;
 }
 
 .portfolio-description h3{
     color: #0b0d0e;
     font-size: 24px;
     font-weight: 700;
-    text-transform: uppercase;
 }
 
 .single-portfolio-item {
@@ -472,13 +493,11 @@ height: 350px;
 .single-portfolio-description h3, 
 .comment_form h3 {
     font-size: 24px;
-    text-transform: uppercase;
     color: #0b0d0e;
 }
 
 .single-portfolio-description p {
     font-size: 16px;
-    text-transform: capitalize;
     font-weight: 400;
     color: #0b0d0e;
 }
@@ -492,7 +511,7 @@ height: 350px;
 }
 .post_prev_next a, 
 .post_prev_next h5{
-    text-transform: uppercase;
+    
     color: #000;
 }
 .single_comment {
@@ -520,17 +539,17 @@ height: 350px;
 
 .related_tags h3 {
     font-size: 24px;
-    text-transform: uppercase;
+    
     font-weight: 700;
 }
 
 .single_comment h4{
     color: #08d665;
     margin: 0;
-    text-transform: uppercase;
+    
 }
 .single_comment a{
-    text-transform: uppercase;
+    
 }
 
 .comment_text p{
@@ -560,7 +579,7 @@ height: 350px;
 .single-blog-section-description h4 {
     color: #000;
     font-size: 24px;
-    text-transform: uppercase;
+    
     background: #ddd;
     padding: 50px 30px;
     line-height: 1.6;
@@ -609,7 +628,7 @@ img.inner-shape3 {
 
 .single-quote h6 {
     font-size: 14px;
-    text-transform: uppercase;
+    
     color: #fff;
     margin-top: 30px;
 }
@@ -618,7 +637,7 @@ img.inner-shape3 {
 .single-quote h2 a{
     font-size: 30px;
     line-height: 40px;
-    text-transform: uppercase;
+    
     margin: 20px 0 0 0;
     color: #fff;
 }
@@ -770,7 +789,7 @@ img.memphis.memphis7 {
 
 .contact__card h4 {
     font-size: 24px;
-    text-transform: uppercase;
+    
     color: #32383A;
     margin: 20px 0;
 }
