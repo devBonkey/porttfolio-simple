@@ -54,6 +54,32 @@
 #         rsync -avzc --delete ./ $USER@$HOST:/var/www/portfolio/
 
 
+# name: CD for Portfolio Site
+
+# on:
+#   push:
+#     branches: [ main ]
+
+# jobs:
+#   deploy:
+#     runs-on: ubuntu-latest
+    
+#     steps:
+#     - name: Checkout code
+#       uses: actions/checkout@v2
+    
+#     - name: Set up SSH
+#       run: |
+#         mkdir -p ~/.ssh
+#         echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_ed25519
+#         chmod 600 ~/.ssh/id_ed25519
+#         ssh-keyscan -H ${{ secrets.HOST }} >> ~/.ssh/known_hosts
+
+#     - name: Deploy to Contabo
+#       run: |
+#         rsync -avzc --delete ./ ${{ secrets.USER }}@${{ secrets.HOST }}:/var/www/portfolio/
+
+
 name: CD for Portfolio Site
 
 on:
@@ -70,11 +96,25 @@ jobs:
     
     - name: Set up SSH
       run: |
+        # Créez le répertoire ~/.ssh
         mkdir -p ~/.ssh
+        echo "=== Écriture de la clé privée SSH ==="
         echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_ed25519
         chmod 600 ~/.ssh/id_ed25519
+
+        # Vérifiez si la clé est écrite correctement
+        echo "=== Contenu de ~/.ssh/id_ed25519 ==="
+        cat ~/.ssh/id_ed25519
+        
+        # Calculez le SSH Fingerprint
+        echo "=== Ajout de l'hôte connu ==="
         ssh-keyscan -H ${{ secrets.HOST }} >> ~/.ssh/known_hosts
+
+        # Vérifiez le contenu de known_hosts
+        echo "=== Contenu de ~/.ssh/known_hosts ==="
+        cat ~/.ssh/known_hosts
 
     - name: Deploy to Contabo
       run: |
+        echo "=== Déploiement en cours ==="
         rsync -avzc --delete ./ ${{ secrets.USER }}@${{ secrets.HOST }}:/var/www/portfolio/
