@@ -19,7 +19,7 @@ jobs:
         SSH_PRIVATE_KEY: -----BEGIN OPENSSH PRIVATE KEY----- b3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAAAMwAAAAtzc2gtZWQyNTUxOQAAACBUAdtlABqDl/j2H1Ycw/9jlRto0RarEnYPIax95EkIiQAAAKBHHcwlRx3MJQAAAAtzc2gtZWQyNTUxOQAAACBUAdtlABqDl/j2H1Ycw/9jlRto0RarEnYPIax95EkIiQAAAEBy1YIC75sf1jt13YZlJ/c/DNpjH07xdNMsJuNLNI4GbVQB22UAGoOX+PYfVhzD/2OVG2jRFqsSdg8hrH3kSQiJAAAAG2JvbmtleS5maWFnbmlnYmVAZXBpdGVjaC5ldQEC-----END OPENSSH PRIVATE KEY-----
       run: |
         mkdir -p ~/.ssh
-        echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_ed25519
-        chmod 600 ~/.ssh/id_ed25519
+        echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa
+        chmod 600 ~/.ssh/id_rsa
         ssh-keyscan -H $HOST >> ~/.ssh/known_hosts
         rsync -avzc --delete ./ $USER@$HOST:/var/www/portfolio/
