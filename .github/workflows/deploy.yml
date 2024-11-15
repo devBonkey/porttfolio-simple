@@ -1,3 +1,30 @@
+# name: CD for Portfolio Site
+
+# on:
+#   push:
+#     branches: [ main ]
+
+# jobs:
+
+#   deploy:
+#     runs-on: ubuntu-latest
+    
+#     steps:
+#     - uses: actions/checkout@v2
+    
+#     - name: Deploy to Contabo
+#       env:
+#         HOST: 158.174.193.149
+#         USER: root
+#         # SSH_PRIVATE_KEY: -----BEGIN OPENSSH PRIVATE KEY-----785b3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAAAMwAAAAtzc2gtZWQyNTUxOQAAACClKQsM6+Qy1snrC47U33qzU9F2a4gVcRvOki9D5ksnhQAAAKBofCl5aHwpeQAAAAtzc2gtZWQyNTUxOQAAACClKQsM6+Qy1snrC47U33qzU9F2a4gVcRvOki9D5ksnhQAAAEBNbxCm+d/bxSZ3yFTRxekh2AUgsPBhXlvDp//CIKQZXKUpCwzr5DLWyesLjtTferNT0XZriBVxG86SL0PmSyeFAAAAG2JvbmtleS5maWFnbmlnYmVAZXBpdGVjaC5ldQEC-----END OPENSSH PRIVATE KEY-----
+#       run: |
+#         mkdir -p ~/.ssh
+#         # echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_ed25519
+#         # chmod 600 ~/.ssh/id_ed25519
+#         ssh-keyscan -H $HOST >> ~/.ssh/known_hosts
+#         rsync -avzc --delete ./ $USER@$HOST:/var/www/portfolio/
+
+
 name: CD for Portfolio Site
 
 on:
@@ -5,21 +32,23 @@ on:
     branches: [ main ]
 
 jobs:
-
   deploy:
     runs-on: ubuntu-latest
     
     steps:
-    - uses: actions/checkout@v2
+    - name: Checkout code
+      uses: actions/checkout@v2
     
-    - name: Deploy to Contabo
-      env:
-        HOST: 157.173.192.148
-        USER: root
-        # SSH_PRIVATE_KEY: -----BEGIN OPENSSH PRIVATE KEY-----b3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAAAMwAAAAtzc2gtZWQyNTUxOQAAACClKQsM6+Qy1snrC47U33qzU9F2a4gVcRvOki9D5ksnhQAAAKBofCl5aHwpeQAAAAtzc2gtZWQyNTUxOQAAACClKQsM6+Qy1snrC47U33qzU9F2a4gVcRvOki9D5ksnhQAAAEBNbxCm+d/bxSZ3yFTRxekh2AUgsPBhXlvDp//CIKQZXKUpCwzr5DLWyesLjtTferNT0XZriBVxG86SL0PmSyeFAAAAG2JvbmtleS5maWFnbmlnYmVAZXBpdGVjaC5ldQEC-----END OPENSSH PRIVATE KEY-----
+    - name: Set up SSH
       run: |
         mkdir -p ~/.ssh
-        # echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_ed25519
-        # chmod 600 ~/.ssh/id_ed25519
-        ssh-keyscan -H $HOST >> ~/.ssh/known_hosts
+        echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_ed25519
+        chmod 600 ~/.ssh/id_ed25519
+        ssh-keyscan -H ${{ secrets.HOST }} >> ~/.ssh/known_hosts
+
+    - name: Deploy to Contabo
+      env:
+        HOST: ${{ secrets.HOST }}
+        USER: ${{ secrets.USER }}
+      run: |
         rsync -avzc --delete ./ $USER@$HOST:/var/www/portfolio/
