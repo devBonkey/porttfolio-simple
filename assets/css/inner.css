@@ -202,7 +202,7 @@ span.single-blog-section-img-tag {
  
 }
 .blog-box p{
-    text-transform: capitalize;
+    /* text-transform: capitalize; */
     font-size: 15px;
     font-weight: 400;
     color: #000;
@@ -911,7 +911,7 @@ img.memphis.memphis7 {
 
 .contact__card ul li {
     color: #999999;
-    text-transform: capitalize;
+    /* text-transform: capitalize; */
     font-size: 18px;
     font-weight: 400;
     margin-bottom: 3px;

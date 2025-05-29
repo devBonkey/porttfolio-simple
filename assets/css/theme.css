@@ -487,7 +487,7 @@ h1.wlc-filltext {
     background-size: cover;
 }
 .about-img-section1{
-    background-image: url(../img/about/about1.png);
+    background-image: url(../img/about/photo-bk.jpg);
     background-size: cover;
     background-position: center
 }
@@ -664,7 +664,7 @@ a.about-video {
 
 .skill-box p {
     font-size     : 15px;
-    text-transform: capitalize;
+    /* text-transform: capitalize; */
     color         : #fff;
     font-weight   : 400;
     line-height   : 1.6;
@@ -766,7 +766,7 @@ a.about-video {
 }
 .primery-skill .skill-box p {
     font-size     : 15px;
-    text-transform: capitalize;
+    /* text-transform: capitalize; */
     color         : #0b0d0e;
     font-weight   : 400;
     line-height   : 1.6;
@@ -1007,7 +1007,7 @@ span.circle.circle-4 {
 
 .service-text p {
     color         : #999999;
-    text-transform: capitalize;
+    /* text-transform: capitalize; */
     font-size     : 18px;
     font-weight   : 400;
     margin-bottom: 0;
@@ -1254,7 +1254,7 @@ span.circle.circle-4 {
 
 .service-text h5 {
     color         : #999999;
-    text-transform: capitalize;
+    /* text-transform: capitalize; */
     font-size     : 18px;
 }
 
@@ -1361,7 +1361,7 @@ span.circle.circle-4 {
 
 .testimonial-text p {
     font-size: 18px;
-    text-transform: capitalize;
+    /* text-transform: capitalize; */
     color: #fff;
     font-weight: 400;
     margin: 0;
@@ -1459,7 +1459,7 @@ a.readmore-btn i {
 
 .blog-description h6 {
     color: #131617;
-    text-transform: capitalize;
+    /* text-transform: capitalize; */
     font-weight: 400;
     margin-bottom: 0;
 }
@@ -1474,7 +1474,7 @@ a.readmore-btn i {
 
 .blog-description p {
     color: #131617;
-    text-transform: capitalize;
+    /* text-transform: capitalize; */
     font-weight: 400;
     margin:0;
 }
@@ -1543,7 +1543,23 @@ a.readmore-btn {
      width: 43%;
     float: right;
 }
+.cta-form button.subscribe-btn {
+    width: 43%;
+   float: right;
+}
 a.subscribe-btn {
+    padding: 15px 60px 15px 30px;
+    background: #22cd6f;
+    border-radius: 5px;
+    color: #fff;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 2;
+    text-align: left;
+    border: 1px solid transparent;
+    font-size: 15px;
+}
+button.subscribe-btn {
     padding: 15px 60px 15px 30px;
     background: #22cd6f;
     border-radius: 5px;
@@ -1565,7 +1581,34 @@ a.subscribe-btn:hover i{
     transition: all .3s;
 }
 
+button.subscribe-btn:hover, 
+button.subscribe-btn:hover i{
+    border-color: #22cd6f;
+    background: transparent;
+    color: #22cd6f;
+    -webkit-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s;
+}
+
 a.subscribe-btn i {
+    background: #fff;
+    color: #22cd6f;
+    height: 35px;
+    width: 35px;
+    text-align: center !important;
+    position: absolute;
+    right: 13px;
+    line-height: 35px;
+    border-radius: 3px;
+    top: 50%;
+    margin-top: -17.5px;
+    -webkit-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s;
+}
+
+button.subscribe-btn i {
     background: #fff;
     color: #22cd6f;
     height: 35px;
@@ -1861,7 +1904,7 @@ span.single-social-icon i {
 
 .primery-info-content p{
     font-size     : 18px;
-    text-transform: capitalize;
+    /* text-transform: capitalize; */
     font-weight   : 400;
     color: #08d665;
     margin-bottom: 0;
@@ -1879,7 +1922,7 @@ span.single-social-icon i {
 
 .info-content p{
     font-size     : 18px;
-    text-transform: capitalize;
+    /* text-transform: capitalize; */
     font-weight   : 400;
     margin-bottom: 0;
 }

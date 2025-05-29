@@ -134,7 +134,7 @@
                 <div class="row">
                     <div class="col-lg-5 align-self-center">
                         <div class="about-shape">
-                            <div class="about-img-section text-center" style="background-image: url(assets/img/about/about1.png);background-size: cover;background-position: center">
+                            <div class="about-img-section text-center" style="background-image: url(assets/img/about/photo-bk.jpg);background-size: cover;background-position: center">
                               
                             </div>
                         </div>
@@ -257,7 +257,7 @@
                 <div class="row">
                     <div class="col-lg-6 align-self-center">
                         <div class="primery-heading">
-                            <strong class="filltext">my carrer</strong>
+                            <strong class="filltext">Ma carrière</strong>
                             <small>MES EXPERIENCES</small>
                             <h2>Experiences and <span>skills</span></h2>
                         </div>
@@ -269,14 +269,34 @@
                     </div> -->
                 </div>
                 <div class="space-60"></div>
-                <div class="row">
+                <div class="row" style="row-gap: 30px;">
                     <div class="col-lg-4">
                         <div class="skill-box skill-box2">
-                            <small>Décembre 2024 - à présent (DCLIC - OIF (OIF S/C CUBE))</small>
-                            <h5>Coach IT | Designer UI | Développeur web & mobile FullStack</h5>
-                            <p>Animation d'atelier, accompagnement des participants et développement de solutions numériques.</p>
+                            <small>Novembre 2024 - à présent (CUBE HOLDING)</small>
+                            <h5>Développeur de solutions numériques web et mobile & Formateur IT</h5>
+                            <p>Développement de solutions numériques pour CUBE et ses partenaires externes. 
+                                Rédaction des propositions techniques et financières pour des appels d'offre. </p>
                         </div>
                     </div>
+                    <div class="col-lg-4">
+                        <div class="skill-box skill-box2">
+                            <small>Janvier à Avril 2025 (DCLIC de l'OIF S/C CUBE)</small>
+                            <h5>Formateur IT sur le programme DCLIC à Lomé</h5>
+                            <p>Tuteur sur la phase de déploiement terrain du projet DCLIC de 
+                                l’Organisation Internationale de la Francophonie (OIF) et
+                                 Responsable d’Équipe à Lomé (114 personnes formés)</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="skill-box skill-box2">
+                            <small>Février 2025 - à présent (UniPod Togo/UL)</small>
+                            <h5>Formateur IT sur le programme Dev1</h5>
+                            <p>Le programme Dev1 de l’UniPod 
+                                est un programme de formation des jeunes dans les métiers du numérique tels que le développement web et mobile.
+                               (104 jeunes en développement web)</p>
+                        </div>
+                    </div>
+                   
                     <div class="col-lg-4">
                         <div class="skill-box skill-box2">
                             <small>Novembre 2023 - JUIN 2024 (Killingiants)</small>
@@ -295,7 +315,17 @@
                         <div class="skill-box skill-box2">
                             <small>Juin - Novembre 2023 (SPARK CORPORATION)</small>
                             <h5>développeur mobile | designer</h5>
-                            <p>Analyse - Conception - Développement mobile - Formation - Maintenance </p>
+                            <p>Analyse - Conception - Développement mobile - Formation - Maintenance Informatique</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="skill-box skill-box2">
+                            <small>Novembre 2024 - Présent (BK SYSTEM GROUP)</small>
+                            <h5>Promoteur du Flutter Bootcamp</h5>
+                            <p>Formation des débutants dans le devéloppement d'applications mobiles
+                                avec Flutter sans aucune notion de bases en 6 semaines. 
+                                Développement de solutions numériques et accompagnement des projets.
+                                 </p>
                         </div>
                     </div>
                 </div>
@@ -416,7 +446,7 @@
                 <div class="row">
                     <div class="col-lg-6 align-self-center">
                         <div class="map mr-lg-4">
-                            <img src="assets/img/contact/contact-map.png" alt="">
+                            <img src="assets/img/contact/contact-map.jpg" alt="">
                         </div>
                     </div>
                     <div class="col-lg-6 align-self-center">
@@ -427,6 +457,15 @@
                         </div>
                         <div class="space-20"></div>
                         <div class="contact-form">
+                            <form id="whatsappForm" onsubmit="sendToWhatsApp(event)">
+                                <input type="text" id="name" placeholder="Nom" required>
+                                <input type="email" id="email" placeholder="Votre adresse Email" required>
+                                <textarea id="message" cols="30" rows="3" placeholder="Message" required></textarea>
+                                <div class="space-20"></div>
+                                <button type="submit" class="subscribe-btn">Envoyer <i class="fal fa-comments-alt"></i></button>
+                            </form>
+                        </div>
+                        <!-- <div class="contact-form">
                             <form action="#">
                                 <input type="text" placeholder="Nom">
                                 <input type="email" placeholder="Votre adresse Email">
@@ -434,7 +473,7 @@
                             </form>
                             <div class="space-20"></div>
                             <a href="#" class="subscribe-btn">Envoyer <i class="fal fa-comments-alt"></i></a>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
@@ -510,6 +549,21 @@
                             
     </div> <!--:::::SITE AREA END :::::::-->
 
+    <script>
+        function sendToWhatsApp(event) {
+            event.preventDefault(); // Empêche l'envoi classique du formulaire
+        
+            const name = document.getElementById("name").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const message = document.getElementById("message").value.trim();
+        
+            const phoneNumber = "22891543227";
+            const text = `Bonjour, je suis ${name}.\nEmail : ${email}\nMessage : ${message}`;
+        
+            const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(text)}`;
+            window.open(whatsappURL, "_blank");
+        }
+        </script>
 
 
     <!--:::::ALL JS FILES :::::::-->
