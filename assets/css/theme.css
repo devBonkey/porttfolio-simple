@@ -195,6 +195,7 @@ a.contact-btn:hover{
 */
 .header-area {
     border-bottom: 1px solid #15181a;
+    padding: 20px 0;
 }
 .search-area div {
     display: inline-block;
@@ -891,6 +892,42 @@ a.about-video {
 
 }
 
+
+.edu-card{
+    border: 1px solid #eeeeee;
+    border-radius: 12px;
+    box-shadow: 0 12px 24px rgba(0,0,0,0.08);
+    transition: all .3s;
+}
+.edu-card:before{
+    height: 6px;
+    width: 100%;
+    left: 0;
+    top: 0;
+    border-radius: 12px 12px 0 0;
+    background: linear-gradient(90deg, #08d665, #4ad996);
+    z-index: 1;
+}
+.edu-card:hover:before{
+    height: 6px;
+    width: 100%;
+    left: 0;
+    top: 0;
+    border-radius: 12px 12px 0 0;
+}
+.edu-card:hover{
+    transform: translateY(-6px);
+    box-shadow: 0 16px 32px rgba(0,0,0,0.12);
+}
+.edu-card small{
+    color: #5c5c5c;
+}
+.edu-card h5{
+    color: #0b0d0e;
+}
+.edu-card p{
+    color: #3c3c3c;
+}
 
 /*
 ==========================
